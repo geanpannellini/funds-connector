@@ -1,0 +1,8 @@
+version: 2
+
+models:
+    - name: globepay_chargeback_report
+      description: "A starter dbt model"
+
+    - name: globepay_acceptance_report
+      description: "A starter dbt model"
