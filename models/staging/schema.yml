@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: staging__globepay__acceptance_report
+    description: ..
+    columns:
+      - name: external_ref
+        description: Unique ID
+        tests:
+          - unique
+          - not_null

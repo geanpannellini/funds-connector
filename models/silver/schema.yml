@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: silver__acceptance_country
+    description: Table represents all unique country on dimension
+    columns:
+      - name: id
+        description: Unique ID to countrys
+        tests:
+          - unique
+          - not_null
