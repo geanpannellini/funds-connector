@@ -15,7 +15,8 @@ SELECT
         c.name AS source_name,
         d.date_time AS date_time,
         f.name AS country_name,
-        e.name AS currency_name
+        e.name AS currency_name,
+        g.status_chargeback AS chargeback_status
 
 FROM {{ ref('silver__acceptance_transactions') }} AS a
 LEFT JOIN
@@ -33,3 +34,12 @@ ON a.currency_id = e.id
 LEFT JOIN
 {{ ref('silver__acceptance_country') }} AS f
 ON a.country_id = f.id
+LEFT JOIN
+{{ ref('silver__chargeback_transactions') }} AS g
+ON a.external_ref = g.external_ref
+LEFT JOIN
+{{ ref('silver__chargeback_status') }} AS h
+ON g.status_id = h.id
+LEFT JOIN
+{{ ref('silver__chargeback_source') }} AS i
+ON g.source_id = i.id
