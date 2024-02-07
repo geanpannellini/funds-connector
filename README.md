@@ -1,1 +1,1 @@
-# study_deel
+# study_finance
