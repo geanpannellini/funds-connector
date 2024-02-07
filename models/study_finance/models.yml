@@ -1,0 +1,8 @@
+version: 2
+
+models:
+    - name: globepay_chargeback_report
+      description: "Send payment parameters (like amount, country, and currency) together with the input details collected from the customer to Globepay."
+
+    - name: globepay_acceptance_report
+      description: "The response returns the result of the payment request:"
