@@ -5,6 +5,6 @@
 }}
 
 SELECT 
-      external_ref as country_id,
-      country as country_name
+      external_ref as id,
+      country as name
 FROM {{ ref('staging__globepay__acceptance_report') }}
