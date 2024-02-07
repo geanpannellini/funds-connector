@@ -5,6 +5,6 @@
 }}
 
 SELECT 
-      external_ref as status_id,
-      status as status_name
+      external_ref as id,
+      status as name
 FROM {{ ref('staging__globepay__acceptance_report') }}

@@ -5,7 +5,7 @@
 }}
 
 SELECT 
-      external_ref as date_types_id,
+      external_ref as id,
       date_time as date_time,
       date_time as timestamp,
       date_time as time,
