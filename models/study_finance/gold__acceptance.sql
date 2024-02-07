@@ -26,7 +26,7 @@ LEFT JOIN
 ON a.source_id = c.id
 LEFT JOIN
 {{ ref('silver__acceptance_dates_types') }} AS d
-ON a.dates_type_id = d.id
+ON a.date_id = d.id
 LEFT JOIN
 {{ ref('silver__acceptance_currency') }} AS e
 ON a.currency_id = e.id
