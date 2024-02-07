@@ -17,7 +17,7 @@ SELECT
         f.name AS country_name,
         e.name AS currency_name
 
-FROM {{ ref('silver__acceptance_transaction') }} AS a
+FROM {{ ref('silver__acceptance_transactions') }} AS a
 LEFT JOIN
 {{ ref('silver__acceptance_status') }} AS b
 ON a.status_id = b.id
