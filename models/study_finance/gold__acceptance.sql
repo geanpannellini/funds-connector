@@ -11,11 +11,11 @@ SELECT
         a.cvv_provided,
         a.amount,
         a.rates,
-        b.status,
-        c.source,
-        d.date_time,
-        f.country,
-        e.currency
+        b.name AS status_name,
+        c.name AS source_name,
+        d.date_time AS date_time,
+        f.name AS country_name,
+        e.name AS currency_name
 
 FROM {{ ref('silver__acceptance_transaction') }} AS a
 LEFT JOIN
