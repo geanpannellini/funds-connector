@@ -43,3 +43,7 @@ Using the gold__transactions you can answer some questions like:
   external_ref
   FROM {{ref('gold__acceptance')}}
   WHERE chargeback_status = 'false'
+
+# 6. Stack
+
+- Colocar a stack utilizada
