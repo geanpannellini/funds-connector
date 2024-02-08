@@ -1,4 +1,3 @@
-
 SELECT  {{ define_quarterly('date_time') }} AS monthly,
         state,
         count(state) AS count,
