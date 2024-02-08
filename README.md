@@ -2,7 +2,7 @@
 
 You can utilize the gold area to address business inquiries effectively. 
 
-The primary model, which is [gold__transactions](models/gold/gold__transactions.sql), provides the means to answer all the previous questions mentioned.
+The primary model, which is [gold__transactions](models/marts/gold__transactions.sql), provides the means to answer all the previous questions mentioned.
 
  `What is the acceptance rate over time?` [Analyses, Answer 1](analyses/answer_1_acceptance_rate_over_time.sql)
 
@@ -21,7 +21,7 @@ The primary model, which is [gold__transactions](models/gold/gold__transactions.
 
  `Which transactions are missing chargeback data?` [Analyses, Answer 3](analyses/answer_3_transac_missing_chargeback.sql)
 
-> There aren't information about chargeback transactions in `95,90% of them.`
+> There isn't information about chargeback transactions in `95,90% of them.`
 
 # About the Data Pipeline
 
@@ -33,18 +33,24 @@ It is important to check all tables, for this, we used some traditional tests th
 
 > (1) In All tables there is unique text using the main key: `external_ref`
 
-> (2) Regarding the country, the test to identify the countrys with chargeback, using the union for the staging tables, results the following countries: `CA, MX, AE, US, FR, and UK.`
+> (2) Regarding the country, the test to identify the countries with chargeback, using the union for the staging tables, results from the following countries: `CA, MX, AE, US, FR, and UK.`
 
 > (3) Concerning transaction time, an important question arises: Why are transactions chargeback during `these specific times` – "04:48:00, 19:12:00, 14:24:00, 09:36:00, 00:00:00"?
 
 ### 2. Summary of your model architecture
 
-- Colocar a imagem do starschema
-  
+All intermediate tables are possibly found [here](models/intermediate). 
+
+The schema is above:
+
+<img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/65f04488-e823-48bd-b9af-3812f492e37e">
+
+> [!IMPORTANT]
+> The ideal dimension relationship would be `1:N`, but the circumstances just allow me to use the same primary key (external_ref) for all tables, because this the relationship is `1:1`.
+
 ### 3. Lineage graphs
 
-<img width="800" alt="image" src="https://github.com/geanpannellini/study_finance_transactions/assets/70926945/29c16b80-3bed-4ec2-8e6e-2badd37c2a57">
-
+<img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/21b35853-b502-4d30-ae4d-4f18c36de32b">
 
 ### 4. Tips around macros, data validation, and documentation
 
@@ -54,6 +60,7 @@ It is important to check all tables, for this, we used some traditional tests th
 
 > :point_right: [Documentation] In All tables are implemented tables and columns describe. To check a case, [click here.](models/marts/schema.yml)
 
-### 6. Stack
+### 5. Aditional information: Stack
 
-- Colocar a stack utilizada
+<img width="477" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/c6814ff5-66b5-4aa1-97b0-479368a69ce1">
+
