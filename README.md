@@ -39,6 +39,10 @@ It is important to check all tables, for this, we used some traditional tests th
 
 ### 2. Summary of your model architecture
 
+All intermediate tables are possibly found [here](models/intermediate). 
+
+The schema is above:
+
 <img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/4fcc5ff4-131f-41bd-8ef9-de25c1879296">
  
 ### 3. Lineage graphs
