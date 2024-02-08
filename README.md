@@ -23,7 +23,7 @@ The primary model, which is [gold__transactions](models/gold/gold__transactions.
 
 > We have established certain standards for testing, focusing on two key aspects: (1) country and (2)transaction time.
 
-> (1) - Regarding country, the test encompasses the following countries: CA, MX, AE, US, FR, and UK.
+> (1) - Regarding the country, the test encompasses the following countries: CA, MX, AE, US, FR, and UK.
 
 > (2) Concerning transaction time, an important question arises: Why are transactions chargeback during these specific times – "04:48:00, 19:12:00, 14:24:00, 09:36:00, 00:00:00"?
 
@@ -31,18 +31,24 @@ The primary model, which is [gold__transactions](models/gold/gold__transactions.
 
 ### 1. Preliminary data exploration
 
-It is important to check all tables, for this, we used some traditional tests that are possible to check here.
+It is important to check all tables, for this, we used some traditional tests that are possible [to check here](analyses/preliminary_data_exploration.sql).
 
 ### 2. Summary of your model architecture
 
 - Colocar a imagem do starschema
   
 ### 3. Lineage graphs
-- Colocar o print da linhagem do dbt
+
+<img width="800" alt="image" src="https://github.com/geanpannellini/study_finance_transactions/assets/70926945/29c16b80-3bed-4ec2-8e6e-2badd37c2a57">
+
 
 ### 4. Tips around macros, data validation, and documentation
 
-For all tables, there is a data validation and tests that you can consult here
+> :point_right: [Macros] I created the dates macro to help with monthly, quarterly, semiannually. To check a case, [click here.](macros/dates.sql)
+
+> :point_right: [Data Validation] In All tables are implemented tests in the primary key and important columns. To check a case, [click here.](models/staging/schema.yml)
+
+> :point_right: [Documentation] In All tables are implemented tables and columns describe. To check a case, [click here.](models/gold/schema.yml)
 
 ### 6. Stack
 
