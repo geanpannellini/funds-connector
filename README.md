@@ -55,4 +55,5 @@ It is important to check all tables, for this, we used some traditional tests th
 
 ### 6. Stack
 
-- Colocar a stack utilizada
+<img width="477" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/c6814ff5-66b5-4aa1-97b0-479368a69ce1">
+
