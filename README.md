@@ -4,7 +4,7 @@ You can utilize the gold area to address business inquiries effectively.
 The primary table, which is [gold__transactions](url), provides the means to answer all the previous questions mentioned.
 
 - `What is the acceptance rate over time?` [Folder: Analyses, Answer 1](url)
-[Folder: Analyses, Answer 1](blob/main/analyses/answer_1_acceptance_rate_over_time.sql)
+[Folder: Analyses, Answer 1](analyses/answer_1_acceptance_rate_over_time.sql)
 
 > The results for acceptance rate over time are:
 
