@@ -5,6 +5,6 @@
 }}
 
 SELECT 
-      external_ref as id,
-      status as name
+      external_ref AS id,
+      status AS name
 FROM {{ ref('stg__globepay__acceptance__report') }}

@@ -3,7 +3,7 @@
 -- T1 - CHECK THE HOUR OF TRANSACTIONS
 SELECT
         TO_CHAR(TO_TIMESTAMP(a.date_time, 'YYYY-MM-DD"T"HH24:MI:SS.MSZ'), 'HH24:MI:SS') AS date_time,
-        COUNT(a.external_ref) as count
+        COUNT(a.external_ref) AS count
 FROM {{ref('stg__globepay__acceptance__report')}} AS a
 LEFT JOIN {{ref('stg__globepay__chargeback__report')}} AS b
 ON a.external_ref = b.external_ref
@@ -28,7 +28,7 @@ ORDER BY count DESC
 SELECT
         TO_CHAR(TO_TIMESTAMP(a.date_time, 'YYYY-MM-DD"T"HH24:MI:SS.MSZ'), 'HH24:MI:SS') AS date_time,
         country,
-        COUNT(a.external_ref) as count
+        COUNT(a.external_ref) AS count
 FROM {{ref('stg__globepay__acceptance__report')}} AS a
 LEFT JOIN {{ref('stg__globepay__chargeback__report')}} AS b
 ON a.external_ref = b.external_ref
