@@ -43,8 +43,11 @@ All intermediate tables are possibly found [here](models/intermediate).
 
 The schema is above:
 
-<img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/4fcc5ff4-131f-41bd-8ef9-de25c1879296">
- 
+<img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/65f04488-e823-48bd-b9af-3812f492e37e">
+
+> [!IMPORTANT]
+> The ideal dimension relationship would be `1:N`, but the circumstances just allow me to use the same primary key (external_ref) for all tables, because this the relationship is `1:1`.
+
 ### 3. Lineage graphs
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/21b35853-b502-4d30-ae4d-4f18c36de32b">
