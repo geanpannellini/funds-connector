@@ -1,6 +1,6 @@
 {{
   config(
-    alias='silver__acceptance_dates_types'
+    alias='silver__acceptance__dates_types'
     )
 }}
 

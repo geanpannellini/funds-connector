@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: staging__globepay__acceptance_report
+  - name: stg__globepay__acceptance_report
     description: The table returns the result of the payment request
     columns:
       - name: external_ref
@@ -32,7 +32,7 @@ models:
       - name: cvv_provided
         description: If the CCV was informed in the act of transaction.
   
-  - name: staging__globepay__chargeback_report
+  - name: stg__globepay__chargeback_report
     description: The table returns the result about chargebacks
     columns:
       - name: external_ref

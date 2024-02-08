@@ -1,6 +1,6 @@
 {{
   config(
-    alias='silver__chargeback_status'
+    alias='silver__chargeback__status'
     )
 }}
 

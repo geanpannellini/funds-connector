@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: gold__acceptance
+  - name: gold__transactions
     description: Table represents the fact table to transactions, with all characteristics about the transaction
     columns:
       - name: external_ref

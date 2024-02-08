@@ -1,6 +1,6 @@
 {{
   config(
-    alias='staging__globepay__chargeback_report'
+    alias='staging__globepay__chargeback__report'
     )
 }}
 

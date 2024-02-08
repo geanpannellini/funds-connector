@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: silver__acceptance_country
+  - name: int__acceptance__country
     description: Table represents all unique country on dimension
     columns:
       - name: id

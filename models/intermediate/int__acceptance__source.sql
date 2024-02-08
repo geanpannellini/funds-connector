@@ -1,10 +1,10 @@
 {{
   config(
-    alias='silver__acceptance_country'
+    alias='silver__acceptance__source'
     )
 }}
 
 SELECT 
       external_ref as id,
-      country as name
+      source as name
 FROM {{ ref('staging__globepay__acceptance_report') }}
