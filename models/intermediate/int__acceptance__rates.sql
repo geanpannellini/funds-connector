@@ -14,4 +14,4 @@ SELECT
     json_extract_path_text(rates::json, 'SGD') AS rate_SGD,
     json_extract_path_text(rates::json, 'AUD') AS rate_AUD,
     json_extract_path_text(rates::json, 'GBP') AS rate_GBP
-FROM {{ ref('staging__globepay__acceptance_report') }}
+FROM {{ ref('stg__globepay__acceptance__report') }}

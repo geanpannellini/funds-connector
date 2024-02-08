@@ -12,4 +12,4 @@ SELECT
       {{ define_monthly('date_time') }} AS monthly,
       {{ define_quarterly('date_time') }} AS quarterly,
       {{ define_semiannually('date_time') }} AS semiannually
-FROM {{ ref('staging__globepay__acceptance_report') }}
+FROM {{ ref('stg__globepay__acceptance__report') }}

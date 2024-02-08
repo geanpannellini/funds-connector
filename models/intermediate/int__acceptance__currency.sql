@@ -5,6 +5,6 @@
 }}
 
 SELECT 
-      external_ref as id,
-      currency as name
-FROM {{ ref('staging__globepay__acceptance_report') }}
+      external_ref AS id,
+      currency AS name
+FROM {{ ref('stg__globepay__acceptance__report') }}

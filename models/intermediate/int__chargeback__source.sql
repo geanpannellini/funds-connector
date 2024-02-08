@@ -5,6 +5,6 @@
 }}
 
 SELECT 
-      external_ref as id,
-      source as name
-FROM {{ ref('staging__globepay__chargeback_report') }}
+      external_ref AS id,
+      source AS name
+FROM {{ ref('stg__globepay__chargeback__report') }}

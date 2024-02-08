@@ -1,11 +1,147 @@
 version: 2
 
 models:
+  - name: int__acceptance__transactions
+    description: Table with all dates types formatation
+    columns:
+      - name: external_ref
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: status_id
+        description: The status of transaction
+      - name: source_id
+        description: The source of transaction
+      - name: ref
+        description: The reference about the transaction
+      - name: date_id
+        description: he forest key to date types tables
+      - name: state
+        description: The binary state of the transaction. For example, Accepted or Declined.
+      - name: cvv_provided
+        description: If the CCV was informed in the act of transaction.
+      - name: amount
+        description: he amount that has been charged from the card.
+      - name: country_id
+        description: he forest key to country tables
+      - name: currency_id
+        description: he forest key to currency tables
+      - name: rate_id
+        description: The forest key to rates tables
+  - name: int__chargeback__transactions
+    description: Table with all dates types formatation
+    columns:
+      - name: external_ref
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: status_id
+        description: The status of transaction
+      - name: source_id
+        description: The source of transaction
+      - name: status_chargeback
+        description: If the chargeback is true or false
   - name: int__acceptance__country
     description: Table represents all unique country on dimension
     columns:
       - name: id
-        description: Unique ID to countrys
+        description: Unique ID
         tests:
           - unique
           - not_null
+      - name: name
+        description: characteristic
+  - name: int__acceptance__currency
+    description: Table represents all unique currency on dimension
+    columns:
+      - name: id
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: characteristic
+  - name: int__acceptance__source
+    description: Table represents all unique source on dimension
+    columns:
+      - name: id
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: characteristic
+  - name: int__acceptance__status
+    description: Table represents all unique status on dimension
+    columns:
+      - name: id
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: characteristic
+  - name: int__chargeback__status
+    description: Table represents all unique country on dimension
+    columns:
+      - name: id
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: characteristic
+  - name: int__chargeback__source
+    description: Table represents all unique country on dimension
+    columns:
+      - name: id
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: characteristic
+  - name: int__acceptance__rates
+    description: Table represents all rates and respective countrys
+    columns:
+      - name: id
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: rate_CAD
+        description: The conversion in currency country
+      - name: rate_EUR
+        description: The conversion in currency country
+      - name: rate_MXN
+        description: The conversion in currency country
+      - name: rate_USD
+        description: The conversion in currency country
+      - name: rate_SGD
+        description: The conversion in currency country
+      - name: rate_AUD
+        description: The conversion in currency country
+      - name: rate_GBP
+        description: The conversion in currency country
+  - name: int__chargeback__dates_types
+    description: Table with all dates types formatation
+    columns:
+      - name: id
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: date_time
+        description: Date plus Hour (yyyy-mm-dd-hh-mm-ss)
+      - name: date
+        description: Date (yyyy-mm-dd)
+      - name: hour
+        description: Hour (hh-mm-ss)
+      - name: monthly
+        description: The macro converted to monthly period
+      - name: quarterly
+        description: The macro converted to quarterly period
+      - name: semiannually
+        description: The macro converted to semiannually period
