@@ -13,6 +13,5 @@ SELECT  external_ref,
         cvv_provided,
         amount,
         external_ref AS country_id,
-        external_ref AS currency_id,
-        rates
+        external_ref AS currency_id
 FROM {{ ref('staging__globepay__acceptance_report') }}
