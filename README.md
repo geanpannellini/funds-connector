@@ -2,7 +2,7 @@
 
 You can utilize the gold area to address business inquiries effectively. 
 
-The primary model, which is [gold__transactions](models/gold/gold__transactions.sql), provides the means to answer all the previous questions mentioned.
+The primary model, which is [gold__transactions](models/marts/gold__transactions.sql), provides the means to answer all the previous questions mentioned.
 
  `What is the acceptance rate over time?` [Analyses, Answer 1](analyses/answer_1_acceptance_rate_over_time.sql)
 
