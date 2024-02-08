@@ -1,6 +1,6 @@
 {{
   config(
-    alias='silver__acceptance_status'
+    alias='silver__acceptance__status'
     )
 }}
 

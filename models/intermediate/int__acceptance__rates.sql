@@ -1,6 +1,6 @@
 {{
   config(
-    alias='silver__acceptance_rates'
+    alias='silver__acceptance__rates'
     )
 }}
 

@@ -1,6 +1,6 @@
 {{
   config(
-    alias='silver__chargeback_source'
+    alias='silver__chargeback__source'
     )
 }}
 

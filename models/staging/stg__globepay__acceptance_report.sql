@@ -1,6 +1,6 @@
 {{
   config(
-    alias='staging__globepay__acceptance_report'
+    alias='staging__globepay__acceptance__report'
     )
 }}
 
