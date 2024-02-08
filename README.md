@@ -1,6 +1,35 @@
+# About Business Questions
+
+You can utilize the gold area to address business inquiries effectively. 
+The primary table, which is [gold__transactions](url), provides the means to answer all the previous questions mentioned.
+
+- `What is the acceptance rate over time?` [Folder: Analyses, Answer 1](url)
+[Folder: Analyses, Answer 1](blob/main/analyses/answer_1_acceptance_rate_over_time.sql)
+
+> The results for acceptance rate over time are:
+
+> 1. Monthly: Average around 11.50%
+> 2. Quarterly: Average around 34.70%
+> 3. Semiannually: 69.55%
+  
+- `List the countries where the amount of declined transactions went over $25M` [Folder: Analyses, Answer 2](url)
+
+> The results are AE, CA, and US.
+> Ps: It is important to highlight that the amount is USD, because this, doesn't need to be transformed.
+
+- `Which transactions are missing chargeback data?` [Folder: Analyses, Answer 3](url)
+
+> We have established certain standards for testing, focusing on two key aspects: (1) country and (2)transaction time.
+
+> (1) - Regarding country, the test encompasses the following countries: CA, MX, AE, US, FR, and UK.
+
+> (2) Concerning transaction time, an important question arises: Why are transactions chargeback during these specific times – "04:48:00, 19:12:00, 14:24:00, 09:36:00, 00:00:00"?
+
+# About the Data Pipeline
+
 # 1. Preliminary data exploration
 
-For all tables, there is a column mapping, click here to discover more.
+It is important to check all tables, for this, we used some traditional tests that are possible to check here.
 
 # 2. Summary of your model architecture
 
@@ -12,37 +41,6 @@ For all tables, there is a column mapping, click here to discover more.
 # 4. Tips around macros, data validation, and documentation
 
 For all tables, there is a data validation and tests that you can consult here
-
-# 5. Answering Business Questions
-
-For answer business questions, you can use the gold area (Linkar aqui o modelo)
-
-Using the gold__transactions you can answer some questions like: 
-
-- What is the acceptance rate over time?
-
-  SELECT date_time,
-        state,
-        count(state) as contagem
-  FROM {{ref('gold__acceptance')}}
-  group by 1,2
-  ORDER BY 1
-  
-- List the countries where the amount of declined transactions went over $25M
-
-  SELECT country_name,
-        sum(amount) as somatoria
-  FROM {{ref('gold__acceptance')}}
-  WHERE state = 'DECLINED'
-  group by 1
-  ORDER BY 1
-
-- Which transactions are missing chargeback data?
-
-  SELECT
-  external_ref
-  FROM {{ref('gold__acceptance')}}
-  WHERE chargeback_status = 'false'
 
 # 6. Stack
 
