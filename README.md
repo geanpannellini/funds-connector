@@ -21,7 +21,7 @@ The primary model, which is [gold__transactions](models/gold/gold__transactions.
 
  `Which transactions are missing chargeback data?` [Analyses, Answer 3](analyses/answer_3_transac_missing_chargeback.sql)
 
-> There aren't information about chargeback transactions in `95,90% of them.`
+> There isn't information about chargeback transactions in `95,90% of them.`
 
 # About the Data Pipeline
 
@@ -33,18 +33,17 @@ It is important to check all tables, for this, we used some traditional tests th
 
 > (1) In All tables there is unique text using the main key: `external_ref`
 
-> (2) Regarding the country, the test to identify the countrys with chargeback, using the union for the staging tables, results the following countries: `CA, MX, AE, US, FR, and UK.`
+> (2) Regarding the country, the test to identify the countries with chargeback, using the union for the staging tables, results from the following countries: `CA, MX, AE, US, FR, and UK.`
 
 > (3) Concerning transaction time, an important question arises: Why are transactions chargeback during `these specific times` – "04:48:00, 19:12:00, 14:24:00, 09:36:00, 00:00:00"?
 
 ### 2. Summary of your model architecture
 
-- Colocar a imagem do starschema
-  
+<img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/4fcc5ff4-131f-41bd-8ef9-de25c1879296">
+ 
 ### 3. Lineage graphs
 
-<img width="800" alt="image" src="https://github.com/geanpannellini/study_finance_transactions/assets/70926945/29c16b80-3bed-4ec2-8e6e-2badd37c2a57">
-
+<img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/21b35853-b502-4d30-ae4d-4f18c36de32b">
 
 ### 4. Tips around macros, data validation, and documentation
 
