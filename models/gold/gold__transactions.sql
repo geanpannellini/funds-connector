@@ -17,7 +17,17 @@ SELECT
         d.hour AS date_hour,
         f.name AS country_name,
         e.name AS currency_name,
-        g.status_chargeback AS chargeback_status
+        g.status_chargeback AS chargeback_status,
+        CASE
+            WHEN e.name = 'CAD' THEN j.rate_CAD
+            WHEN e.name = 'EUR' THEN j.rate_EUR
+            WHEN e.name = 'MXN' THEN j.rate_CAD
+            WHEN e.name = 'USD' THEN j.rate_USD
+            WHEN e.name = 'SGD' THEN j.rate_SGD
+            WHEN e.name = 'AUD' THEN j.rate_AUD
+            WHEN e.name = 'GBP' THEN j.rate_GBP
+        ELSE null
+        END AS tax_rate
 
 FROM {{ ref('silver__acceptance_transactions') }} AS a
 LEFT JOIN
@@ -44,3 +54,6 @@ ON g.status_id = h.id
 LEFT JOIN
 {{ ref('silver__chargeback_source') }} AS i
 ON g.source_id = i.id
+LEFT JOIN
+{{ ref('silver__acceptance_rates') }} AS j
+ON a.external_ref = j.id
