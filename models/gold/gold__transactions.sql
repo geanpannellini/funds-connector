@@ -6,11 +6,9 @@
 
 SELECT  
         a.external_ref,
-    	a.ref,
         a.state,
         a.cvv_provided,
-        a.amount,
-        a.rates,
+        a.amount, -- Funds are settled to you in USD.
         b.name AS status_name,
         c.name AS source_name,
         d.date_time AS date_time,

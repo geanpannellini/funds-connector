@@ -1,7 +1,7 @@
 WITH total_amount_per_country AS (
     SELECT 
         country_name,
-        SUM(amount) AS total_amount
+        SUM(amount) AS total_amount -- Funds are settled in USD.
     FROM {{ref('gold__transactions')}}
     WHERE state = 'DECLINED'
     GROUP BY 1
