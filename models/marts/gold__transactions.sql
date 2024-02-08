@@ -54,4 +54,4 @@ LEFT JOIN
 ON g.source_id = i.id
 LEFT JOIN
 {{ ref('silver__acceptance_rates') }} AS j
-ON a.external_ref = j.id
+ON a.rate_id = j.id
