@@ -46,7 +46,7 @@ The schema is above:
 <img width="800" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/65f04488-e823-48bd-b9af-3812f492e37e">
 
 > [!IMPORTANT]
-> The ideal dimension relationship would be `1:N`, but the circumstances just allow me to use the same primary key (external_ref) for all tables, because this the relationship is `1:1`.
+> The ideal dimension relationship would be `1:N`, but the circumstances just allow me to use the same primary key (external_ref) then the relationship is `1:1`.
 
 ### 3. Lineage graphs
 
@@ -54,7 +54,7 @@ The schema is above:
 
 ### 4. Tips around macros, data validation, and documentation
 
-> :point_right: [Macros] I created the dates macro to help with monthly, quarterly, semiannually. To check a case, [click here.](macros/dates.sql)
+> :point_right: [Macros] I created the dates macro to help with monthly, quarterly, semiannually. To check a case, [click here.](macros/dates.sql) To check an application, [click here.](models/intermediate/int__acceptance__dates_types.sql)
 
 > :point_right: [Data Validation] In All tables are implemented tests in the primary key and important columns. To check a case, [click here.](models/staging/schema.yml)
 
