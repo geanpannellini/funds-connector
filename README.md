@@ -1,10 +1,9 @@
 # About Business Questions
 
 You can utilize the gold area to address business inquiries effectively. 
-The primary table, which is [gold__transactions](url), provides the means to answer all the previous questions mentioned.
+The primary table, which is [gold__transactions](models/gold/gold__transactions.sql), provides the means to answer all the previous questions mentioned.
 
-- `What is the acceptance rate over time?` [Folder: Analyses, Answer 1](url)
-[Folder: Analyses, Answer 1](analyses/answer_1_acceptance_rate_over_time.sql)
+- `What is the acceptance rate over time?` [Folder: Analyses, Answer 1](analyses/answer_1_acceptance_rate_over_time.sql)
 
 > The results for acceptance rate over time are:
 
@@ -12,12 +11,12 @@ The primary table, which is [gold__transactions](url), provides the means to ans
 > 2. Quarterly: Average around 34.70%
 > 3. Semiannually: 69.55%
   
-- `List the countries where the amount of declined transactions went over $25M` [Folder: Analyses, Answer 2](url)
+- `List the countries where the amount of declined transactions went over $25M` [Folder: Analyses, Answer 2](analyses/answer_2_country_amount_declined_transac_over_25M.sql)
 
 > The results are AE, CA, and US.
 > Ps: It is important to highlight that the amount is USD, because this, doesn't need to be transformed.
 
-- `Which transactions are missing chargeback data?` [Folder: Analyses, Answer 3](url)
+- `Which transactions are missing chargeback data?` [Folder: Analyses, Answer 3](analyses/answer_3_transac_missing_chargeback.sql)
 
 > We have established certain standards for testing, focusing on two key aspects: (1) country and (2)transaction time.
 
