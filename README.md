@@ -10,30 +10,32 @@ The primary model, which is [gold__transactions](models/gold/gold__transactions.
 
 > 1. Monthly: Average around 11.50%
 > 2. Quarterly: Average around 34.70%
-> 3. Semiannually: 69.55%
+> 3. Semiannually: `69.55%`
   
  `List the countries where the amount of declined transactions went over $25M` [Analyses, Answer 2](analyses/answer_2_country_amount_declined_transac_over_25M.sql)
 
-> The results are AE, CA, and US.
+> The results are `AE, CA, and US.`
 
 > [!IMPORTANT]
 > It is important to highlight that the amount is USD, because this, doesn't need to be transformed.
 
  `Which transactions are missing chargeback data?` [Analyses, Answer 3](analyses/answer_3_transac_missing_chargeback.sql)
- 
-(CHECAR)
 
-> We have established certain standards for testing, focusing on two key aspects: (1) country and (2)transaction time.
-
-> (1) - Regarding the country, the test encompasses the following countries: CA, MX, AE, US, FR, and UK.
-
-> (2) Concerning transaction time, an important question arises: Why are transactions chargeback during these specific times – "04:48:00, 19:12:00, 14:24:00, 09:36:00, 00:00:00"?
+> There aren't information about chargeback transactions in `95,90% of them.`
 
 # About the Data Pipeline
 
 ### 1. Preliminary data exploration
 
 It is important to check all tables, for this, we used some traditional tests that are possible [to check here](analyses/preliminary_data_exploration.sql).
+
+> We have established certain exploration standards for testing, focusing on three key aspects: (1) unique tests, (2) country, and (3)transaction time.
+
+> (1) In All tables there is unique text using the main key: `external_ref`
+
+> (2) Regarding the country, the test to identify the countrys with chargeback, using the union for the staging tables, results the following countries: `CA, MX, AE, US, FR, and UK.`
+
+> (3) Concerning transaction time, an important question arises: Why are transactions chargeback during `these specific times` – "04:48:00, 19:12:00, 14:24:00, 09:36:00, 00:00:00"?
 
 ### 2. Summary of your model architecture
 
