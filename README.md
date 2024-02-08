@@ -60,7 +60,7 @@ The schema is above:
 
 > :point_right: [Documentation] In All tables are implemented tables and columns describe. To check a case, [click here.](models/marts/schema.yml)
 
-### 5. Aditional information: Stack
+### 5. Additional information: Stack
 
 <img width="477" alt="image" src="https://github.com/geanpannellini/funds-connector/assets/70926945/c6814ff5-66b5-4aa1-97b0-479368a69ce1">
 
