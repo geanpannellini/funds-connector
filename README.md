@@ -20,6 +20,8 @@ The primary model, which is [gold__transactions](models/gold/gold__transactions.
 > It is important to highlight that the amount is USD, because this, doesn't need to be transformed.
 
  `Which transactions are missing chargeback data?` [Analyses, Answer 3](analyses/answer_3_transac_missing_chargeback.sql)
+ 
+(CHECAR)
 
 > We have established certain standards for testing, focusing on two key aspects: (1) country and (2)transaction time.
 
