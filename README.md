@@ -52,7 +52,7 @@ It is important to check all tables, for this, we used some traditional tests th
 
 > :point_right: [Data Validation] In All tables are implemented tests in the primary key and important columns. To check a case, [click here.](models/staging/schema.yml)
 
-> :point_right: [Documentation] In All tables are implemented tables and columns describe. To check a case, [click here.](models/gold/schema.yml)
+> :point_right: [Documentation] In All tables are implemented tables and columns describe. To check a case, [click here.](models/marts/schema.yml)
 
 ### 6. Stack
 
