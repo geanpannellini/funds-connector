@@ -27,31 +27,31 @@ SELECT
         ELSE null
         END AS tax_rate
 
-FROM {{ ref('silver__acceptance_transactions') }} AS a
+FROM {{ ref('int__acceptance__transactions') }} AS a
 LEFT JOIN
-{{ ref('silver__acceptance_status') }} AS b
+{{ ref('int__acceptance__status') }} AS b
 ON a.status_id = b.id
 LEFT JOIN
-{{ ref('silver__acceptance_source') }} AS c
+{{ ref('int__acceptance__source') }} AS c
 ON a.source_id = c.id
 LEFT JOIN
-{{ ref('silver__acceptance_dates_types') }} AS d
+{{ ref('int__acceptance__dates_types') }} AS d
 ON a.date_id = d.id
 LEFT JOIN
-{{ ref('silver__acceptance_currency') }} AS e
+{{ ref('int__acceptance__currency') }} AS e
 ON a.currency_id = e.id
 LEFT JOIN
-{{ ref('silver__acceptance_country') }} AS f
+{{ ref('int__acceptance__country') }} AS f
 ON a.country_id = f.id
 LEFT JOIN
-{{ ref('silver__chargeback_transactions') }} AS g
+{{ ref('int__chargeback__transactions') }} AS g
 ON a.external_ref = g.external_ref
 LEFT JOIN
-{{ ref('silver__chargeback_status') }} AS h
+{{ ref('int__chargeback__status') }} AS h
 ON g.status_id = h.id
 LEFT JOIN
-{{ ref('silver__chargeback_source') }} AS i
+{{ ref('int__chargeback__source') }} AS i
 ON g.source_id = i.id
 LEFT JOIN
-{{ ref('silver__acceptance_rates') }} AS j
+{{ ref('int__acceptance__rates') }} AS j
 ON a.rate_id = j.id

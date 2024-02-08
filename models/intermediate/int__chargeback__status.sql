@@ -7,4 +7,4 @@
 SELECT 
       external_ref as id,
       status as name
-FROM {{ ref('staging__globepay__chargeback_report') }}
+FROM {{ ref('stg__globepay__chargeback__report') }}
