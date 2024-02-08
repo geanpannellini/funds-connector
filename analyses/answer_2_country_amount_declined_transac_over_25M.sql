@@ -2,7 +2,7 @@ WITH total_amount_per_country AS (
     SELECT 
         country_name,
         SUM(amount) AS total_amount
-    FROM {{ref('gold__acceptance')}}
+    FROM {{ref('gold__transactions')}}
     WHERE state = 'DECLINED'
     GROUP BY 1
 

@@ -1,6 +1,6 @@
 {{
   config(
-    alias='gold_acceptance.sql'
+    alias='gold__transactions'
     )
 }}
 
