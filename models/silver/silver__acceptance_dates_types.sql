@@ -7,9 +7,7 @@
 SELECT 
       external_ref as id,
       date_time as date_time,
-      date_time as timestamp,
-      date_time as time,
-      FORMAT(date_time, 'dd') AS date,
-      FORMAT(date_time, 'MM') AS month,
-      FORMAT(date_time, 'YYYY') AS year
+      {{ define_monthly('date_time') }} AS monthly,
+      {{ define_quarterly('date_time') }} AS quarterly,
+      {{ define_semiannually('date_time') }} AS semiannually
 FROM {{ ref('staging__globepay__acceptance_report') }}
