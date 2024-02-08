@@ -14,6 +14,7 @@ SELECT
         b.name AS status_name,
         c.name AS source_name,
         d.date_time AS date_time,
+        d.hour AS date_hour,
         f.name AS country_name,
         e.name AS currency_name,
         g.status_chargeback AS chargeback_status

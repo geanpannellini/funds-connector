@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: gold__acceptance
+    description: Table represents the fact table to transactions, with all characteristics about the transaction
+    columns:
+      - name: external_ref
+        description: Unique ID to identify the transaction
+        tests:
+          - unique
+          - not_null
