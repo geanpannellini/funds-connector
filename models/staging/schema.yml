@@ -2,10 +2,47 @@ version: 2
 
 models:
   - name: staging__globepay__acceptance_report
-    description: ..
+    description: The table returns the result of the payment request
     columns:
       - name: external_ref
         description: Unique ID
         tests:
           - unique
           - not_null
+      - name: date_time
+        description: The timestamp of the transaction.
+      - name: state
+        description: The binary state of the transaction. For example, Accepted or Declined.
+      - name: amount
+        description: The amount that has been charged from the card.
+      - name: currency
+        description: The three-character ISO currency code.
+      - name: country
+        description: The two-character ISO country code of the card.
+      - name: rates
+        description: The exchange rate used. Funds are settled to you in USD.
+      - name: currency
+        description: The three-character ISO currency code.
+      - name: source
+        description: The company made the transaction. Example, Globepay
+      - name: status
+        description: Status about the transaction
+      - name: ref
+        description: Reference about transaction
+      - name: cvv_provided
+        description: If the CCV was informed in the act of transaction.
+  
+  - name: staging__globepay__chargeback_report
+    description: The table returns the result about chargebacks
+    columns:
+      - name: external_ref
+        description: Unique ID
+        tests:
+          - unique
+          - not_null
+      - name: source
+        description: The company made the transaction. Example, Globepay
+      - name: status
+        description: Status about the transaction
+      - name: chargeback
+        description: If the chargeback is made, using true or false

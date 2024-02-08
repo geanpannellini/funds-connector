@@ -4,7 +4,6 @@
     )
 }}
 
-
 SELECT 
       external_ref as id,
       currency as name

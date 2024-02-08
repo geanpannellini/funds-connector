@@ -14,5 +14,5 @@ SELECT  external_ref,
         amount,
         country,
         currency,
-        rates 
+        REPLACE(rates, ';', ',') AS rates 
 FROM {{ source('finance', 'globepay_acceptance_report') }} 

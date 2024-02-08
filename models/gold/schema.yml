@@ -9,3 +9,25 @@ models:
         tests:
           - unique
           - not_null
+      - name: state
+        description: The binary state of the transaction. For example, Accepted or Declined.
+      - name: cvv_provided
+        description: If the CCV was informed in the act of transaction.
+      - name: amount
+        description: The amount that has been charged from the card. (USD)
+      - name: status_name
+        description:  Status about the transaction
+      - name: source_name
+        description:  The company made the transaction. Example, Globepay
+      - name: date_time
+        description: The timestamp of the transaction.
+      - name: date_hour
+        description: The hour of the transaction. (hh:mm:ss)
+      - name: country_name
+        description: The two-character ISO country code of the card.
+      - name: currency_name
+        description: The three-character ISO currency code.
+      - name: chargeback_status
+        description: If the chargeback is made, using true or false
+      - name: tax_rate
+        description: The tax rate used for each transaction, the transaction is convert to USD.
